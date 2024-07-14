@@ -6,26 +6,38 @@
     <title>Chess AI</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/oakmac/chessboardjs/lib/chessboard.css" />
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
       .board {
         width: 400px;
-        margin: auto;
+        margin: 15px;
       }
-
-      #info {
-        width: 400px;
-        margin: auto;
+      body
+      {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .info
+      {
+        display: none;
+      }
+      ::-webkit-scrollbar {
+        display: none;
       }
     </style>
   </head>
   <body>
-    <h3 class="board">Chess AI</h3>
+    <h1 class="board">Chess AI</h1>
     <div id="myBoard" class="board"></div>
     <br />
-    <div id="info">
-      Search depth: <select id="searchDepth">
-        <option selected>3</option>
-        
-      </select>
+    <div class="info">
+      <label for="searchDepth">Search Depth</label>
+      <input id="searchDepth" type="number" value="3" />
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>

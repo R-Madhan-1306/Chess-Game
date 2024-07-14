@@ -113,7 +113,7 @@ function onDrop(source, target) {
 
   if (move === null) return 'snapback';
 
-  setTimeout(makeBestMove, 250);
+  setTimeout(makeBestMove, 100);
 }
 
 function makeBestMove() {
